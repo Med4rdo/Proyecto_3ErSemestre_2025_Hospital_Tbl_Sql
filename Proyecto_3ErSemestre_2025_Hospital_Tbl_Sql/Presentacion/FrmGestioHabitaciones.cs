@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Proyecto3er_SEMESTRE_Hospital_2025
 {
-    public partial class frm_GestioHabitaciones : Form
+    public partial class FrmGestioHabitaciones : Form
     {
-        public frm_GestioHabitaciones()
+        public FrmGestioHabitaciones()
         {
             InitializeComponent();
         }

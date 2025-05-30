@@ -11,10 +11,10 @@ using System.Windows.Forms;
 
 namespace Proyecto3er_SEMESTRE_Hospital_2025
 {
-    public partial class frm_Menu : Form
+    public partial class FrmMenu : Form
     {
         //Constructor
-        public frm_Menu()
+        public FrmMenu()
         {
             InitializeComponent();
             //Estas lineas eliminan los parpadeos del formulario o controles en la interfaz grafica (Pero no en un 100%)
@@ -118,7 +118,7 @@ namespace Proyecto3er_SEMESTRE_Hospital_2025
 
         private void btnGestionHabitaciones_Click(object sender, EventArgs e)
         {
-            AbrirFormulario<frm_GestioHabitaciones>();
+            AbrirFormulario<FrmGestioHabitaciones>();
         }
 
         private void btnHabitaciones_Click(object sender, EventArgs e)
@@ -128,7 +128,7 @@ namespace Proyecto3er_SEMESTRE_Hospital_2025
 
         private void btnPacientes_Click(object sender, EventArgs e)
         {
-            AbrirFormulario<frm_Pacientes>();
+            AbrirFormulario<FrmPacientes>();
         }
 
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]

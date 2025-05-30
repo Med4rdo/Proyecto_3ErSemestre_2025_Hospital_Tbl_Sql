@@ -12,11 +12,11 @@ using System.Windows.Forms;
 
 namespace Proyecto3er_SEMESTRE_Hospital_2025
 {
-    public partial class frm_Pacientes : Form
+    public partial class FrmPacientes : Form
     {
         //    CLhabitaciones CapLogHab = new CLhabitaciones(); queda pendiente
         CDpacientes CapDatPacientes = new CDpacientes();
-        public frm_Pacientes()
+        public FrmPacientes()
         {
             InitializeComponent();
         }

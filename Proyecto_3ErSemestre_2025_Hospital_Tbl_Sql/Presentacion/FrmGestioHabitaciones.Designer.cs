@@ -1,6 +1,6 @@
 ﻿namespace Proyecto3er_SEMESTRE_Hospital_2025
 {
-    partial class frm_GestioHabitaciones
+    partial class FrmGestioHabitaciones
     {
         /// <summary>
         /// Required designer variable.

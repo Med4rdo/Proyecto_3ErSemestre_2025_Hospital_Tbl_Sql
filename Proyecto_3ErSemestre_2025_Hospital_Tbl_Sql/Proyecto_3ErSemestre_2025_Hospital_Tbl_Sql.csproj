@@ -81,29 +81,29 @@
     <Compile Include="Presentacion\FrmUsuarios.Designer.cs">
       <DependentUpon>FrmUsuarios.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presentacion\frm_GestioHabitaciones.cs">
+    <Compile Include="Presentacion\FrmGestioHabitaciones.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentacion\frm_GestioHabitaciones.Designer.cs">
-      <DependentUpon>frm_GestioHabitaciones.cs</DependentUpon>
+    <Compile Include="Presentacion\FrmGestioHabitaciones.Designer.cs">
+      <DependentUpon>FrmGestioHabitaciones.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presentacion\frm_Habitaciones.cs">
+    <Compile Include="Presentacion\FrmHabitaciones.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentacion\frm_Habitaciones.Designer.cs">
-      <DependentUpon>frm_Habitaciones.cs</DependentUpon>
+    <Compile Include="Presentacion\FrmHabitaciones.Designer.cs">
+      <DependentUpon>FrmHabitaciones.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presentacion\frm_Menu.cs">
+    <Compile Include="Presentacion\FrmMenu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentacion\frm_Menu.Designer.cs">
-      <DependentUpon>frm_Menu.cs</DependentUpon>
+    <Compile Include="Presentacion\FrmMenu.Designer.cs">
+      <DependentUpon>FrmMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presentacion\frm_Pacientes.cs">
+    <Compile Include="Presentacion\FrmPacientes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentacion\frm_Pacientes.Designer.cs">
-      <DependentUpon>frm_Pacientes.cs</DependentUpon>
+    <Compile Include="Presentacion\FrmPacientes.Designer.cs">
+      <DependentUpon>FrmPacientes.cs</DependentUpon>
     </Compile>
     <Compile Include="Presentacion\tbl_usuarios.cs">
       <SubType>Form</SubType>
@@ -122,17 +122,17 @@
     <EmbeddedResource Include="Presentacion\FrmUsuarios.resx">
       <DependentUpon>FrmUsuarios.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentacion\frm_GestioHabitaciones.resx">
-      <DependentUpon>frm_GestioHabitaciones.cs</DependentUpon>
+    <EmbeddedResource Include="Presentacion\FrmGestioHabitaciones.resx">
+      <DependentUpon>FrmGestioHabitaciones.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentacion\frm_Habitaciones.resx">
-      <DependentUpon>frm_Habitaciones.cs</DependentUpon>
+    <EmbeddedResource Include="Presentacion\FrmHabitaciones.resx">
+      <DependentUpon>FrmHabitaciones.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentacion\frm_Menu.resx">
-      <DependentUpon>frm_Menu.cs</DependentUpon>
+    <EmbeddedResource Include="Presentacion\FrmMenu.resx">
+      <DependentUpon>FrmMenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentacion\frm_Pacientes.resx">
-      <DependentUpon>frm_Pacientes.cs</DependentUpon>
+    <EmbeddedResource Include="Presentacion\FrmPacientes.resx">
+      <DependentUpon>FrmPacientes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\tbl_usuarios.resx">
       <DependentUpon>tbl_usuarios.cs</DependentUpon>
