@@ -14,8 +14,9 @@ namespace Proyecto3er_SEMESTRE_Hospital_2025
 {
     public partial class FrmPacientes : Form
     {
-        //    CLhabitaciones CapLogHab = new CLhabitaciones(); queda pendiente
+
         CDpacientes CapDatPacientes = new CDpacientes();
+        ClaseFechas CapDatFecha = new ClaseFechas();
         public FrmPacientes()
         {
             InitializeComponent();
@@ -37,7 +38,32 @@ namespace Proyecto3er_SEMESTRE_Hospital_2025
 
         private void frm_Pacientes_Load(object sender, EventArgs e)
         {
+            lblFecha.Text = CapDatFecha.MtdFechaHoy().ToString("d");
             MtdMostrarListaCitas();
+            MtdConsultarPacientes();
         }
+
+        private void MtdConsultarPacientes ()
+        {
+
+            DataTable Dt = CapDatPacientes.MtdConsultarPacientes();
+            DgvPacientes.DataSource = Dt;
+
+        }
+
+
+
+        private void MtdLimpiaCampos()
+        {
+            txtCodigoPaciente.Text  =  "";
+            cboxCodHabitacion.Text = "";
+            txtNombre.Text = "";
+            txtNit.Text = "";
+            DtFechaNacimiento.Text = "";
+            CboxTipoPaciente.Text = "";
+            CboxEstado.Text = "";
+        }
+
+
     }
 }

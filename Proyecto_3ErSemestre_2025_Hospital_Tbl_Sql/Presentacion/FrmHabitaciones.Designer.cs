@@ -1,6 +1,6 @@
 ﻿namespace Proyecto3er_SEMESTRE_Hospital_2025
 {
-    partial class Frm_Habitaciones
+    partial class FrmHabitaciones
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -324,7 +324,7 @@
             this.txtnNumero.TabIndex = 25;
             this.txtnNumero.Text = "Numero:";
             // 
-            // Frm_Habitaciones
+            // FrmHabitaciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -336,7 +336,7 @@
             this.Controls.Add(this.btneliminar);
             this.Controls.Add(this.btnsalir);
             this.Controls.Add(this.DgvHabitaciones);
-            this.Name = "Frm_Habitaciones";
+            this.Name = "FrmHabitaciones";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Habitaciones";
             this.Load += new System.EventHandler(this.tbl_Habitaciones_Load);

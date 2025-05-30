@@ -35,14 +35,14 @@
             this.CboxTipoPaciente = new System.Windows.Forms.ComboBox();
             this.CboxEstado = new System.Windows.Forms.ComboBox();
             this.DtFechaNacimiento = new System.Windows.Forms.DateTimePicker();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.DgvPacientes = new System.Windows.Forms.DataGridView();
             this.btncancelar = new FontAwesome.Sharp.IconButton();
             this.btneditar = new FontAwesome.Sharp.IconButton();
             this.btnAgregar = new FontAwesome.Sharp.IconButton();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.txtNit = new System.Windows.Forms.TextBox();
             this.btneliminar = new FontAwesome.Sharp.IconButton();
             this.btnsalir = new FontAwesome.Sharp.IconButton();
             this.lblHabitaciones = new System.Windows.Forms.Label();
@@ -50,9 +50,9 @@
             this.lblTituloFecha = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.cboxCodHabitacion = new System.Windows.Forms.ComboBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtCodigoPaciente = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvPacientes)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -132,13 +132,13 @@
             this.DtFechaNacimiento.Size = new System.Drawing.Size(134, 20);
             this.DtFechaNacimiento.TabIndex = 7;
             // 
-            // dataGridView1
+            // DgvPacientes
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(7, 232);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(833, 170);
-            this.dataGridView1.TabIndex = 8;
+            this.DgvPacientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DgvPacientes.Location = new System.Drawing.Point(7, 232);
+            this.DgvPacientes.Name = "DgvPacientes";
+            this.DgvPacientes.Size = new System.Drawing.Size(833, 170);
+            this.DgvPacientes.TabIndex = 8;
             // 
             // btncancelar
             // 
@@ -208,19 +208,19 @@
             this.label3.TabIndex = 30;
             this.label3.Text = "Nombre:";
             // 
-            // textBox1
+            // txtNombre
             // 
-            this.textBox1.Location = new System.Drawing.Point(182, 96);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(135, 20);
-            this.textBox1.TabIndex = 31;
+            this.txtNombre.Location = new System.Drawing.Point(182, 96);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(135, 20);
+            this.txtNombre.TabIndex = 31;
             // 
-            // textBox2
+            // txtNit
             // 
-            this.textBox2.Location = new System.Drawing.Point(182, 131);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(135, 20);
-            this.textBox2.TabIndex = 32;
+            this.txtNit.Location = new System.Drawing.Point(182, 131);
+            this.txtNit.Name = "txtNit";
+            this.txtNit.Size = new System.Drawing.Size(135, 20);
+            this.txtNit.TabIndex = 32;
             // 
             // btneliminar
             // 
@@ -287,10 +287,10 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.cboxCodHabitacion);
-            this.groupBox1.Controls.Add(this.textBox3);
+            this.groupBox1.Controls.Add(this.txtCodigoPaciente);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.txtNit);
+            this.groupBox1.Controls.Add(this.txtNombre);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.btncancelar);
@@ -317,13 +317,13 @@
             this.cboxCodHabitacion.Size = new System.Drawing.Size(135, 21);
             this.cboxCodHabitacion.TabIndex = 36;
             // 
-            // textBox3
+            // txtCodigoPaciente
             // 
-            this.textBox3.Location = new System.Drawing.Point(181, 31);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.ReadOnly = true;
-            this.textBox3.Size = new System.Drawing.Size(134, 20);
-            this.textBox3.TabIndex = 35;
+            this.txtCodigoPaciente.Location = new System.Drawing.Point(181, 31);
+            this.txtCodigoPaciente.Name = "txtCodigoPaciente";
+            this.txtCodigoPaciente.ReadOnly = true;
+            this.txtCodigoPaciente.Size = new System.Drawing.Size(134, 20);
+            this.txtCodigoPaciente.TabIndex = 35;
             // 
             // label1
             // 
@@ -335,7 +335,7 @@
             this.label1.TabIndex = 34;
             this.label1.Text = "Codigo Paciente: ";
             // 
-            // frm_Pacientes
+            // FrmPacientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -346,12 +346,12 @@
             this.Controls.Add(this.lblHabitaciones);
             this.Controls.Add(this.btneliminar);
             this.Controls.Add(this.btnsalir);
-            this.Controls.Add(this.dataGridView1);
-            this.Name = "frm_Pacientes";
+            this.Controls.Add(this.DgvPacientes);
+            this.Name = "FrmPacientes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Pacientes";
             this.Load += new System.EventHandler(this.frm_Pacientes_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvPacientes)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -368,21 +368,21 @@
         private System.Windows.Forms.ComboBox CboxTipoPaciente;
         private System.Windows.Forms.ComboBox CboxEstado;
         private System.Windows.Forms.DateTimePicker DtFechaNacimiento;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView DgvPacientes;
         private FontAwesome.Sharp.IconButton btncancelar;
         private FontAwesome.Sharp.IconButton btneditar;
         private FontAwesome.Sharp.IconButton btnAgregar;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtNombre;
+        private System.Windows.Forms.TextBox txtNit;
         private FontAwesome.Sharp.IconButton btneliminar;
         private FontAwesome.Sharp.IconButton btnsalir;
         private System.Windows.Forms.Label lblHabitaciones;
         private System.Windows.Forms.Label lblFecha;
         private System.Windows.Forms.Label lblTituloFecha;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtCodigoPaciente;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cboxCodHabitacion;
     }

@@ -15,5 +15,6 @@ namespace Proyecto_3ErSemestre_2025_Hospital_Tbl_Sql.Logica
         {
             return DateTime.Now;
         }
+
     }
 }

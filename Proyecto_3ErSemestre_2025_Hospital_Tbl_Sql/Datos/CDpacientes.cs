@@ -36,7 +36,7 @@ namespace Proyecto_3ErSemestre_2025_Hospital_Tbl_Sql.Datos
         // Consulta tratamientos en la base de datos para cargar en el DataGridView
         public DataTable MtdConsultarPacientes()
         {
-            string QueryConsultar = "Select * from tbl_Habitaciones";
+            string QueryConsultar = "Select * from tbl_Pacientes";
             SqlDataAdapter SqlAdap = new SqlDataAdapter(QueryConsultar, CapDatConexiones.MtdAbrirConexion());
             DataTable Dt = new DataTable();
             SqlAdap.Fill(Dt);
@@ -44,7 +44,45 @@ namespace Proyecto_3ErSemestre_2025_Hospital_Tbl_Sql.Datos
             return Dt;
         }
 
+        public void MtdAgregarPacientes(string Nombres, string nit, DateTime FechaNacimiento , string TipoPaciente, string Estado, string UsuarioAuditoria, DateTime FechaAuditoria)
+        {
+            string QueryAgregar = "Insert into tbl_Pacientes (Nombres, nit, FechaNacimiento, TipoPaciente, Estado, UsuarioAuditoria, FechaAuditoria) values (@Nombres, @nit, @FechaNacimiento, @TipoPaciente, @Estado, @UsuarioAuditoria, @FechaAuditoria)";
+            SqlCommand cmd = new SqlCommand(QueryAgregar, CapDatConexiones.MtdAbrirConexion());
+            cmd.Parameters.AddWithValue("@Nombres", Nombres);
+            cmd.Parameters.AddWithValue("@nit", nit);
+            cmd.Parameters.AddWithValue("@FechaNacimiento", FechaNacimiento);
+            cmd.Parameters.AddWithValue("@TipoPaciente", TipoPaciente);
+            cmd.Parameters.AddWithValue("@Estado", Estado);
+            cmd.Parameters.AddWithValue("@UsuarioAuditoria", UsuarioAuditoria);
+            cmd.Parameters.AddWithValue("@FechaAuditoria", FechaAuditoria);
+            cmd.ExecuteNonQuery();
+            CapDatConexiones.MtdCerrarConexion();
+        }
 
+        public void MtdEditarPacientes(int CodigoPacientes, string Nombres, string nit, DateTime FechaNacimiento, string TipoPaciente, string Estado, string UsuarioAuditoria, DateTime FechaAuditoria)
+        {
+            string QueryEditar = "Update tbl_Pacientes set Numero=@Numero, Ubicacion=@Ubicacion, TipoHabitacion=@TipoHabitacion, Costo=@Costo, Estado=@Estado, FechaAuditoria=@FechaAuditoria, UsuarioAuditoria=@UsuarioAuditoria where CodigoHabitacion=@CodigoHabitacion";
+            SqlCommand cmd = new SqlCommand(QueryEditar, CapDatConexiones.MtdAbrirConexion());
+            cmd.Parameters.AddWithValue("@CodigoPacientes", CodigoPacientes);
+            cmd.Parameters.AddWithValue("@Nombres", Nombres);
+            cmd.Parameters.AddWithValue("@nit", nit);
+            cmd.Parameters.AddWithValue("@FechaNacimiento", FechaNacimiento);
+            cmd.Parameters.AddWithValue("@TipoPaciente", TipoPaciente);
+            cmd.Parameters.AddWithValue("@Estado", Estado);
+            cmd.Parameters.AddWithValue("@UsuarioAuditoria", UsuarioAuditoria);
+            cmd.Parameters.AddWithValue("@FechaAuditoria", FechaAuditoria);
+            cmd.ExecuteNonQuery();
+            CapDatConexiones.MtdCerrarConexion();
+        }
+
+        public void MtdEliminarPacientes(int CodigoPacientes)
+        {
+            string QueryEliminar = "Delete from tbl_Pacientes where CodigoPacientes=@CodigoPacientes";
+            SqlCommand cmd = new SqlCommand(QueryEliminar, CapDatConexiones.MtdAbrirConexion());
+            cmd.Parameters.AddWithValue("@CodigoPacientes", CodigoPacientes);
+            cmd.ExecuteNonQuery();
+            CapDatConexiones.MtdCerrarConexion();
+        }
 
 
 

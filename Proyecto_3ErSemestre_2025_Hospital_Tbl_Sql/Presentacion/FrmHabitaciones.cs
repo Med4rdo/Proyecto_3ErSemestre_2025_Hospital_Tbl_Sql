@@ -13,12 +13,12 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace Proyecto3er_SEMESTRE_Hospital_2025
 {
-    public partial class Frm_Habitaciones : Form
+    public partial class FrmHabitaciones : Form
     {
         CLhabitaciones CapLogHab = new CLhabitaciones();
         CDhabitaciones CapDatHab = new CDhabitaciones();
 
-        public Frm_Habitaciones()
+        public FrmHabitaciones()
         {
             InitializeComponent();
         }

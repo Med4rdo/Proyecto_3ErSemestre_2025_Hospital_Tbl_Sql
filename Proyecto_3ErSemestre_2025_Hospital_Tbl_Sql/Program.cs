@@ -18,7 +18,7 @@ namespace Proyecto_3ErSemestre_2025_Hospital_Tbl_Sql
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmPEmpleados());
+            Application.Run(new FrmPacientes());
         }
     }
 }

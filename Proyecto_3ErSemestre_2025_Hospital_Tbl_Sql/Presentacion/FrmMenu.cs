@@ -123,7 +123,7 @@ namespace Proyecto3er_SEMESTRE_Hospital_2025
 
         private void btnHabitaciones_Click(object sender, EventArgs e)
         {
-            AbrirFormulario<Frm_Habitaciones>();
+            AbrirFormulario<FrmHabitaciones>();
         }
 
         private void btnPacientes_Click(object sender, EventArgs e)
