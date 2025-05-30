@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 using Proyecto3er_SEMESTRE_Hospital_2025;
 
 namespace Proyecto_3ErSemestre_2025_Hospital_Tbl_Sql.datos
-{
+{ //hola mundo
     internal class CDPagoEmpleados
     {
 
