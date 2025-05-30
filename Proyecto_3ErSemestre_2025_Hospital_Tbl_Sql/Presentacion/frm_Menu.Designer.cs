@@ -39,6 +39,7 @@
             this.btnGestionHabitaciones = new System.Windows.Forms.Button();
             this.panelContenedor = new System.Windows.Forms.Panel();
             this.panelFormulario = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.panelBarraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btn_salir)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_maximizar)).BeginInit();
@@ -46,6 +47,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.btn_restaurar)).BeginInit();
             this.panelMenu.SuspendLayout();
             this.panelContenedor.SuspendLayout();
+            this.panelFormulario.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelBarraTitulo
@@ -172,6 +174,7 @@
             // panelFormulario
             // 
             this.panelFormulario.BackColor = System.Drawing.Color.White;
+            this.panelFormulario.Controls.Add(this.label1);
             this.panelFormulario.Cursor = System.Windows.Forms.Cursors.Hand;
             this.panelFormulario.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelFormulario.Location = new System.Drawing.Point(200, 40);
@@ -179,7 +182,16 @@
             this.panelFormulario.Size = new System.Drawing.Size(868, 505);
             this.panelFormulario.TabIndex = 2;
             // 
-            // tbl_Menu
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(240, 48);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "label1";
+            // 
+            // frm_Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -187,7 +199,7 @@
             this.Controls.Add(this.panelContenedor);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MinimumSize = new System.Drawing.Size(550, 300);
-            this.Name = "tbl_Menu";
+            this.Name = "frm_Menu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "tbl_Menu";
             this.panelBarraTitulo.ResumeLayout(false);
@@ -197,6 +209,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.btn_restaurar)).EndInit();
             this.panelMenu.ResumeLayout(false);
             this.panelContenedor.ResumeLayout(false);
+            this.panelFormulario.ResumeLayout(false);
+            this.panelFormulario.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -214,5 +228,6 @@
         private System.Windows.Forms.Button btnPacientes;
         private System.Windows.Forms.Button btnHabitaciones;
         private System.Windows.Forms.Button btnGestionHabitaciones;
+        private System.Windows.Forms.Label label1;
     }
 }
