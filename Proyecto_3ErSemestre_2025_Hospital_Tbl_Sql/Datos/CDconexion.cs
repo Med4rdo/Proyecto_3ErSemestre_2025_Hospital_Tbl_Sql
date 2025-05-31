@@ -10,7 +10,7 @@ namespace Proyecto3er_SEMESTRE_Hospital_2025
 {
     public class CDconexion
     {
-        private SqlConnection db_conexion = new SqlConnection("Data Source=JOSUE\\SQLEXPRESS01;Initial Catalog=db_Hospital;Integrated Security=True;Encrypt=False");
+        private SqlConnection db_conexion = new SqlConnection("Data Source=YODA28\\SQLEXPRESS;Initial Catalog=db_Hospital;Integrated Security=True;Encrypt=False");
 
         public SqlConnection MtdAbrirConexion()
         {

@@ -54,6 +54,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Datos\CDconexion.cs" />
+    <Compile Include="Datos\CDgestionhabitaciones.cs" />
     <Compile Include="Datos\CDhabitaciones.cs" />
     <Compile Include="Datos\CDMedicamentos.cs" />
     <Compile Include="Datos\CDpacientes.cs" />
@@ -172,9 +173,35 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\Imagen de WhatsApp 2025-05-31 a las 02.51.35_a985a253.jpg" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="Resources\ventana_min_pequeño.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Imagen de WhatsApp 2025-05-31 a las 02.51.35_a985a2531.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cama-de-hospital peque .png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\medicamento peque.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hospital.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\paciente.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\metodo-de-pago.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\alquiler.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\usuario.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

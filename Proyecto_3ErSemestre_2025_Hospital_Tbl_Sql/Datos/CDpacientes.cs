@@ -6,6 +6,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Input;
 
 namespace Proyecto_3ErSemestre_2025_Hospital_Tbl_Sql.Datos
 {
@@ -13,6 +14,7 @@ namespace Proyecto_3ErSemestre_2025_Hospital_Tbl_Sql.Datos
     {
         CDconexion CapDatConexiones = new CDconexion();
 
+        // Metdo que envia a llmar cbox habitaciones
         public List<dynamic> MtdListaHabitacion()
         {
             List<dynamic> ListaHabitaciones = new List<dynamic>();
@@ -44,12 +46,11 @@ namespace Proyecto_3ErSemestre_2025_Hospital_Tbl_Sql.Datos
             return Dt;
         }
 
-        public void MtdAgregarPacientes(int CodigoHabitacion, string Nombres, string Nit, DateTime FechaNacimiento , string TipoPaciente, string Estado, string UsuarioAuditoria, DateTime FechaAuditoria)
+        public void MtdAgregarPacientes(string Nombres, string Nit, DateTime FechaNacimiento , string TipoPaciente, string Estado, string UsuarioAuditoria, DateTime FechaAuditoria)
         {
-            string QueryAgregar = "Insert into tbl_Pacientes (CodigoHabitacion, Nombres, nit, FechaNacimiento, TipoPaciente, Estado, UsuarioAuditoria, FechaAuditoria) values (@CodigoHabitacion @Nombres, @nit, @FechaNacimiento, @TipoPaciente, @Estado, @UsuarioAuditoria, @FechaAuditoria)";
+            string QueryAgregar = "Insert into tbl_Pacientes (Nombres, Nit, FechaNacimiento, TipoPaciente, Estado, UsuarioAuditoria, FechaAuditoria) values (@Nombres, @Nit, @FechaNacimiento, @TipoPaciente, @Estado, @UsuarioAuditoria, @FechaAuditoria)";
             SqlCommand cmd = new SqlCommand(QueryAgregar, CapDatConexiones.MtdAbrirConexion());
-            cmd.Parameters.AddWithValue("@CodigoHabitacion", CodigoHabitacion);
-            cmd.Parameters.AddWithValue("@Nombres", Nombres);
+            cmd.Parameters.AddWithValue("@Nombres", Nombres); 
             cmd.Parameters.AddWithValue("@Nit", Nit);
             cmd.Parameters.AddWithValue("@FechaNacimiento", FechaNacimiento);
             cmd.Parameters.AddWithValue("@TipoPaciente", TipoPaciente);

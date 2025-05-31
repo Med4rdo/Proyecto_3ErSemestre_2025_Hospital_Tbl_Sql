@@ -67,17 +67,15 @@ namespace Proyecto3er_SEMESTRE_Hospital_2025
         private void btnAgregar_Click(object sender, EventArgs e)
         {
 
-            if (string.IsNullOrEmpty(cboxCodHabitacion.Text) || string.IsNullOrEmpty(txtNombre.Text) 
+            if (string.IsNullOrEmpty(txtNombre.Text) 
                 || string.IsNullOrEmpty(txtNit.Text) || string.IsNullOrEmpty(DtpFechaNacimiento.Text) || string.IsNullOrEmpty(CboxEstado.Text))
             {
                 MessageBox.Show("Favor completar formulario", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
-                var SelectedHabitacion = (dynamic)cboxCodHabitacion.SelectedItem;
-                int CodigoHabitacion = (int)SelectedHabitacion.Value;
 
-                string Nombres = (txtNombre.Text);
+                string Nombres = txtNombre.Text;
                 string Nit = txtNit.Text;
                 DateTime FechaNacimiento = DtpFechaNacimiento.Value;
                 string TipoPaciente = CboxTipoPaciente.Text;
@@ -85,19 +83,23 @@ namespace Proyecto3er_SEMESTRE_Hospital_2025
                 DateTime FechaAuditoria = CapDatFecha.MtdFechaHoy();
                 string UsuarioAuditoria = "Oscar";
 
-                try
-                {
-                    CapDatPacientes.MtdAgregarPacientes(CodigoHabitacion, Nombres, Nit, FechaNacimiento, TipoPaciente, Estado, UsuarioAuditoria, FechaAuditoria);
-                    MessageBox.Show("Datos agregados correctamente", "Correcto", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    MtdConsultarPacientes();
-                    MtdLimpiaCampos();
-                }
-                catch (Exception ex)
-                {
 
-                    MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-                
+
+                try
+                 {
+
+                CapDatPacientes.MtdAgregarPacientes(Nombres, Nit, FechaNacimiento, TipoPaciente, Estado, UsuarioAuditoria, FechaAuditoria);
+                MessageBox.Show("Datos agregados correctamente", "Correcto", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MtdConsultarPacientes();
+                MtdLimpiaCampos();
+
+                 }
+                 catch (Exception ex)
+                 {
+
+                     MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                 }
+                 
             }
 
 

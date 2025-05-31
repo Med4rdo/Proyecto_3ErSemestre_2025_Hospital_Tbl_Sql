@@ -1,4 +1,7 @@
-﻿using System;
+﻿using Proyecto_3ErSemestre_2025_Hospital_Tbl_Sql;
+using Proyecto_3ErSemestre_2025_Hospital_Tbl_Sql.presentacion;
+using Proyecto_3ErSemestre_2025_Hospital_Tbl_Sql.Presentacion;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -129,6 +132,26 @@ namespace Proyecto3er_SEMESTRE_Hospital_2025
         private void btnPacientes_Click(object sender, EventArgs e)
         {
             AbrirFormulario<FrmPacientes>();
+        }
+
+        private void btnMedicamentos_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<FrmMedicamento>();
+        }
+
+        private void btnPagoCitas_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<FrmPagoCitas>();
+        }
+
+        private void btnPagoEmpleados_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<FrmPEmpleados>();
+        }
+
+        private void btnUsuarios_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<FrmUsuarios>();
         }
 
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]

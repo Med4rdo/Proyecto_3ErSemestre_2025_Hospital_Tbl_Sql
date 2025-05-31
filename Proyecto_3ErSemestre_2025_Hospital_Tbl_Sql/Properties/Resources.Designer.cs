@@ -63,6 +63,26 @@ namespace Proyecto_3ErSemestre_2025_Hospital_Tbl_Sql.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap alquiler {
+            get {
+                object obj = ResourceManager.GetObject("alquiler", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap cama_de_hospital_peque_ {
+            get {
+                object obj = ResourceManager.GetObject("cama-de-hospital peque ", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap cancelar_Pequeño_Cuadrado {
             get {
                 object obj = ResourceManager.GetObject("cancelar_Pequeño_Cuadrado", resourceCulture);
@@ -73,9 +93,79 @@ namespace Proyecto_3ErSemestre_2025_Hospital_Tbl_Sql.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap hospital {
+            get {
+                object obj = ResourceManager.GetObject("hospital", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Imagen_de_WhatsApp_2025_05_31_a_las_02_51_35_a985a253 {
+            get {
+                object obj = ResourceManager.GetObject("Imagen de WhatsApp 2025-05-31 a las 02.51.35_a985a253", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Imagen_de_WhatsApp_2025_05_31_a_las_02_511 {
+            get {
+                object obj = ResourceManager.GetObject("Imagen de WhatsApp 2025-05-31 a las 02.511", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap medicamento_peque {
+            get {
+                object obj = ResourceManager.GetObject("medicamento peque", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap metodo_de_pago {
+            get {
+                object obj = ResourceManager.GetObject("metodo-de-pago", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Minimizar_Verde_pequeño {
             get {
                 object obj = ResourceManager.GetObject("Minimizar_Verde_pequeño", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap paciente {
+            get {
+                object obj = ResourceManager.GetObject("paciente", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap usuario {
+            get {
+                object obj = ResourceManager.GetObject("usuario", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
