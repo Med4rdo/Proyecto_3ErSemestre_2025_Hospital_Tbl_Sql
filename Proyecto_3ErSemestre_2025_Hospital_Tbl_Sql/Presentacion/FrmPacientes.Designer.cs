@@ -34,7 +34,7 @@
             this.LblEstado = new System.Windows.Forms.Label();
             this.CboxTipoPaciente = new System.Windows.Forms.ComboBox();
             this.CboxEstado = new System.Windows.Forms.ComboBox();
-            this.DtFechaNacimiento = new System.Windows.Forms.DateTimePicker();
+            this.DtpFechaNacimiento = new System.Windows.Forms.DateTimePicker();
             this.DgvPacientes = new System.Windows.Forms.DataGridView();
             this.btncancelar = new FontAwesome.Sharp.IconButton();
             this.btneditar = new FontAwesome.Sharp.IconButton();
@@ -124,21 +124,25 @@
             this.CboxEstado.Size = new System.Drawing.Size(135, 21);
             this.CboxEstado.TabIndex = 6;
             // 
-            // DtFechaNacimiento
+            // DtpFechaNacimiento
             // 
-            this.DtFechaNacimiento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.DtFechaNacimiento.Location = new System.Drawing.Point(557, 28);
-            this.DtFechaNacimiento.Name = "DtFechaNacimiento";
-            this.DtFechaNacimiento.Size = new System.Drawing.Size(134, 20);
-            this.DtFechaNacimiento.TabIndex = 7;
+            this.DtpFechaNacimiento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.DtpFechaNacimiento.Location = new System.Drawing.Point(557, 28);
+            this.DtpFechaNacimiento.Name = "DtpFechaNacimiento";
+            this.DtpFechaNacimiento.Size = new System.Drawing.Size(134, 20);
+            this.DtpFechaNacimiento.TabIndex = 7;
             // 
             // DgvPacientes
             // 
+            this.DgvPacientes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
             this.DgvPacientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DgvPacientes.Location = new System.Drawing.Point(7, 232);
             this.DgvPacientes.Name = "DgvPacientes";
+            this.DgvPacientes.ReadOnly = true;
+            this.DgvPacientes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DgvPacientes.Size = new System.Drawing.Size(833, 170);
             this.DgvPacientes.TabIndex = 8;
+            this.DgvPacientes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvPacientes_CellClick);
             // 
             // btncancelar
             // 
@@ -155,6 +159,7 @@
             this.btncancelar.Text = "Cancelar";
             this.btncancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btncancelar.UseVisualStyleBackColor = true;
+            this.btncancelar.Click += new System.EventHandler(this.btncancelar_Click);
             // 
             // btneditar
             // 
@@ -171,6 +176,7 @@
             this.btneditar.Text = "Editar";
             this.btneditar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btneditar.UseVisualStyleBackColor = true;
+            this.btneditar.Click += new System.EventHandler(this.btneditar_Click);
             // 
             // btnAgregar
             // 
@@ -187,6 +193,7 @@
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // label2
             // 
@@ -237,6 +244,7 @@
             this.btneliminar.Text = "Eliminar";
             this.btneliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btneliminar.UseVisualStyleBackColor = true;
+            this.btneliminar.Click += new System.EventHandler(this.btneliminar_Click);
             // 
             // btnsalir
             // 
@@ -253,6 +261,7 @@
             this.btnsalir.Text = "Salir";
             this.btnsalir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnsalir.UseVisualStyleBackColor = true;
+            this.btnsalir.Click += new System.EventHandler(this.btnsalir_Click);
             // 
             // lblHabitaciones
             // 
@@ -296,7 +305,7 @@
             this.groupBox1.Controls.Add(this.btncancelar);
             this.groupBox1.Controls.Add(this.btneditar);
             this.groupBox1.Controls.Add(this.btnAgregar);
-            this.groupBox1.Controls.Add(this.DtFechaNacimiento);
+            this.groupBox1.Controls.Add(this.DtpFechaNacimiento);
             this.groupBox1.Controls.Add(this.CboxEstado);
             this.groupBox1.Controls.Add(this.CboxTipoPaciente);
             this.groupBox1.Controls.Add(this.LblEstado);
@@ -367,7 +376,7 @@
         private System.Windows.Forms.Label LblEstado;
         private System.Windows.Forms.ComboBox CboxTipoPaciente;
         private System.Windows.Forms.ComboBox CboxEstado;
-        private System.Windows.Forms.DateTimePicker DtFechaNacimiento;
+        private System.Windows.Forms.DateTimePicker DtpFechaNacimiento;
         private System.Windows.Forms.DataGridView DgvPacientes;
         private FontAwesome.Sharp.IconButton btncancelar;
         private FontAwesome.Sharp.IconButton btneditar;

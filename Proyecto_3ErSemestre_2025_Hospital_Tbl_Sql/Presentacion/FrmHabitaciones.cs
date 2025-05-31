@@ -106,7 +106,7 @@ namespace Proyecto3er_SEMESTRE_Hospital_2025
                 try
                 {
                     CapDatHab.MtdEditarHabitaciones(CodigoHabitacion, Numero, Ubicacion, TipoHabitacion, Costo, Estado, FechaAuditoria, UsuarioAuditoria);
-                    MessageBox.Show("Datos agregados correctamente", "Correcto", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Datos Editado correctamente", "Correcto", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     MtdConsultarhabitaciones();
                     MtdLimpiaCampos();
                 }

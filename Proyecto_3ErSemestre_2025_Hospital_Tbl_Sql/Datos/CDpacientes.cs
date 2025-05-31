@@ -44,12 +44,13 @@ namespace Proyecto_3ErSemestre_2025_Hospital_Tbl_Sql.Datos
             return Dt;
         }
 
-        public void MtdAgregarPacientes(string Nombres, string nit, DateTime FechaNacimiento , string TipoPaciente, string Estado, string UsuarioAuditoria, DateTime FechaAuditoria)
+        public void MtdAgregarPacientes(int CodigoHabitacion, string Nombres, string Nit, DateTime FechaNacimiento , string TipoPaciente, string Estado, string UsuarioAuditoria, DateTime FechaAuditoria)
         {
-            string QueryAgregar = "Insert into tbl_Pacientes (Nombres, nit, FechaNacimiento, TipoPaciente, Estado, UsuarioAuditoria, FechaAuditoria) values (@Nombres, @nit, @FechaNacimiento, @TipoPaciente, @Estado, @UsuarioAuditoria, @FechaAuditoria)";
+            string QueryAgregar = "Insert into tbl_Pacientes (CodigoHabitacion, Nombres, nit, FechaNacimiento, TipoPaciente, Estado, UsuarioAuditoria, FechaAuditoria) values (@CodigoHabitacion @Nombres, @nit, @FechaNacimiento, @TipoPaciente, @Estado, @UsuarioAuditoria, @FechaAuditoria)";
             SqlCommand cmd = new SqlCommand(QueryAgregar, CapDatConexiones.MtdAbrirConexion());
+            cmd.Parameters.AddWithValue("@CodigoHabitacion", CodigoHabitacion);
             cmd.Parameters.AddWithValue("@Nombres", Nombres);
-            cmd.Parameters.AddWithValue("@nit", nit);
+            cmd.Parameters.AddWithValue("@Nit", Nit);
             cmd.Parameters.AddWithValue("@FechaNacimiento", FechaNacimiento);
             cmd.Parameters.AddWithValue("@TipoPaciente", TipoPaciente);
             cmd.Parameters.AddWithValue("@Estado", Estado);
