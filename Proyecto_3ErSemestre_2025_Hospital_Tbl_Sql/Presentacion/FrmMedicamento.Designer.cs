@@ -149,7 +149,9 @@
             this.cboxtipomed.Items.AddRange(new object[] {
             "Jarabe",
             "Suero",
-            "Etc"});
+            "Crema",
+            "Tableta",
+            "Inyeccion"});
             this.cboxtipomed.Location = new System.Drawing.Point(390, 106);
             this.cboxtipomed.Margin = new System.Windows.Forms.Padding(6);
             this.cboxtipomed.Name = "cboxtipomed";
@@ -236,6 +238,7 @@
             this.DtpFechaVencimiento.Name = "DtpFechaVencimiento";
             this.DtpFechaVencimiento.Size = new System.Drawing.Size(264, 31);
             this.DtpFechaVencimiento.TabIndex = 7;
+            this.DtpFechaVencimiento.ValueChanged += new System.EventHandler(this.DtpFechaVencimiento_ValueChanged);
             // 
             // CboxEstado
             // 

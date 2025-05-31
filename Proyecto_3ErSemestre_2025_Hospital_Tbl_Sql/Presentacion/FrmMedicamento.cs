@@ -76,7 +76,7 @@ namespace Proyecto_3ErSemestre_2025_Hospital_Tbl_Sql.Presentacion
                 DateTime FechaVencimiento = DtpFechaVencimiento.Value;
                 string UsuarioAuditoria = "Josue";
                 double Costo = CapLogMedicamentos.MtdCostoMedicamentos(cboxtipomed.Text);
-                string Nombre = CboxEstado.Text;
+                string Nombre = cboxtipomed.Text;
                 int Stock = int.Parse(txtStock.Text);
 
                 try
@@ -109,7 +109,7 @@ namespace Proyecto_3ErSemestre_2025_Hospital_Tbl_Sql.Presentacion
                 DateTime FechaVencimiento = DtpFechaVencimiento.Value;
                 string UsuarioAuditoria = "Josue";
                 double Costo = CapLogMedicamentos.MtdCostoMedicamentos(cboxtipomed.Text);
-                string Nombre = CboxEstado.Text;
+                string Nombre = cboxtipomed.Text;
                 int Stock = int.Parse(txtStock.Text);
 
                 try
@@ -202,9 +202,14 @@ namespace Proyecto_3ErSemestre_2025_Hospital_Tbl_Sql.Presentacion
 
         private void cboxtipomed_SelectedIndexChanged(object sender, EventArgs e)
         {
-            double costo = double.Parse(txtCosto.Text);
+            double costo = CapLogMedicamentos.MtdCostoMedicamentos(cboxtipomed.Text);
 
-            costo = CapLogMedicamentos.MtdCostoMedicamentos(cboxtipomed.Text);
+            txtCosto.Text = costo.ToString();
+        }
+
+        private void DtpFechaVencimiento_ValueChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

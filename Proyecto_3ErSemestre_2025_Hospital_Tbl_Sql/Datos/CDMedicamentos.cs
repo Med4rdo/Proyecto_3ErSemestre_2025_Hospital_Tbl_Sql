@@ -25,13 +25,13 @@ namespace Proyecto_3ErSemestre_2025_Hospital_Tbl_Sql.Datos
 
         public void MtdAgregar(DateTime FechaVencimiento, string TipoMedicamento, double costo, string Estado, string Nombre, int stock, DateTime FechaAuditoria, string UsuarioAuditoria)
         {
-            string QueryAgregar = "Insert into tbl_Medicamentos (Nombre, TipoMedicamento, Costo, Stock, FechaVencimiento, Estado, UsuarioAuditoria, FechaAuditoria) values (@Nombre, @TipoMedicamento, @Costo, @Stock, @FechaVencimiento, @Estado, @UsuarioAuditoria, @FechaAuditoria)";
+            string QueryAgregar = "Insert into tbl_Medicamentos (Nombre, TipoMedicamento, Costo, Stock, FechaVencimineto, Estado, UsuarioAuditoria, FechaAuditoria) values (@Nombre, @TipoMedicamento, @Costo, @Stock, @FechaVencimineto, @Estado, @UsuarioAuditoria, @FechaAuditoria)";
             SqlCommand cmd = new SqlCommand(QueryAgregar, CapDatConexiones.MtdAbrirConexion());
             cmd.Parameters.AddWithValue("@Nombre", Nombre);
             cmd.Parameters.AddWithValue("@TipoMedicamento", TipoMedicamento);
             cmd.Parameters.AddWithValue("@Costo", costo);
             cmd.Parameters.AddWithValue("@Stock", stock);
-            cmd.Parameters.AddWithValue("@FechaVencimiento", FechaVencimiento);
+            cmd.Parameters.AddWithValue("@FechaVencimineto", FechaVencimiento);
             cmd.Parameters.AddWithValue("@Estado", Estado);
             cmd.Parameters.AddWithValue("@UsuarioAuditoria", UsuarioAuditoria);
             cmd.Parameters.AddWithValue("@FechaAuditoria", FechaAuditoria);
@@ -41,13 +41,13 @@ namespace Proyecto_3ErSemestre_2025_Hospital_Tbl_Sql.Datos
 
         public void MtdEditar(DateTime FechaVencimiento, string TipoMedicamento, double costo, string Estado, string Nombre, int stock, DateTime FechaAuditoria, string UsuarioAuditoria)
         {
-            string QueryEditar = "Update tbl_Medicamentos set Nombre=@Nombre, TipoMedicamento=@TipoMedicamento, Costo=@Costo, Stock=@Stock, FechaVencimiento=@FechaVencimiento, Estado=@Estado, UsuarioAuditoria=@UsuarioAuditoria, FechaAuditoria=@FechaAuditoria where CodigoMedicamento=@CodigoMedicamento";
+            string QueryEditar = "Update tbl_Medicamentos set Nombre=@Nombre, TipoMedicamento=@TipoMedicamento, Costo=@Costo, Stock=@Stock, FechaVencimineto=@FechaVencimineto, Estado=@Estado, UsuarioAuditoria=@UsuarioAuditoria, FechaAuditoria=@FechaAuditoria where CodigoMedicamento=@CodigoMedicamento";
             SqlCommand cmd = new SqlCommand(QueryEditar, CapDatConexiones.MtdAbrirConexion());
             cmd.Parameters.AddWithValue("@Nombre", Nombre);
             cmd.Parameters.AddWithValue("@TipoMedicamento", TipoMedicamento);
             cmd.Parameters.AddWithValue("@Costo", costo);
             cmd.Parameters.AddWithValue("@Stock", stock);
-            cmd.Parameters.AddWithValue("@FechaVencimiento", FechaVencimiento);
+            cmd.Parameters.AddWithValue("@FechaVencimineto", FechaVencimiento);
             cmd.Parameters.AddWithValue("@Estado", Estado);
             cmd.Parameters.AddWithValue("@UsuarioAuditoria", UsuarioAuditoria);
             cmd.Parameters.AddWithValue("@FechaAuditoria", FechaAuditoria);
