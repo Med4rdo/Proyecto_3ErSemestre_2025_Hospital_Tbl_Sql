@@ -30,15 +30,16 @@
         {
             this.panelBarraTitulo = new System.Windows.Forms.Panel();
             this.panelMenu = new System.Windows.Forms.Panel();
+            this.btnUsuarios = new System.Windows.Forms.Button();
+            this.btnPagoEmpleados = new System.Windows.Forms.Button();
+            this.btnPagoCitas = new System.Windows.Forms.Button();
+            this.btnMedicamentos = new System.Windows.Forms.Button();
             this.btnPacientes = new System.Windows.Forms.Button();
             this.btnHabitaciones = new System.Windows.Forms.Button();
             this.btnGestionHabitaciones = new System.Windows.Forms.Button();
             this.panelContenedor = new System.Windows.Forms.Panel();
             this.panelFormulario = new System.Windows.Forms.Panel();
-            this.btnMedicamentos = new System.Windows.Forms.Button();
-            this.btnPagoCitas = new System.Windows.Forms.Button();
-            this.btnPagoEmpleados = new System.Windows.Forms.Button();
-            this.btnUsuarios = new System.Windows.Forms.Button();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
@@ -53,6 +54,7 @@
             this.panelBarraTitulo.SuspendLayout();
             this.panelMenu.SuspendLayout();
             this.panelContenedor.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
@@ -83,6 +85,7 @@
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(41)))), ((int)(((byte)(68)))));
+            this.panelMenu.Controls.Add(this.pictureBox8);
             this.panelMenu.Controls.Add(this.pictureBox7);
             this.panelMenu.Controls.Add(this.pictureBox1);
             this.panelMenu.Controls.Add(this.pictureBox6);
@@ -103,8 +106,73 @@
             this.panelMenu.Size = new System.Drawing.Size(200, 505);
             this.panelMenu.TabIndex = 1;
             // 
+            // btnUsuarios
+            // 
+            this.btnUsuarios.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnUsuarios.FlatAppearance.BorderSize = 0;
+            this.btnUsuarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUsuarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUsuarios.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnUsuarios.Location = new System.Drawing.Point(12, 418);
+            this.btnUsuarios.Name = "btnUsuarios";
+            this.btnUsuarios.Size = new System.Drawing.Size(170, 45);
+            this.btnUsuarios.TabIndex = 6;
+            this.btnUsuarios.Text = "Usuarios";
+            this.btnUsuarios.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnUsuarios.UseVisualStyleBackColor = true;
+            this.btnUsuarios.Click += new System.EventHandler(this.btnUsuarios_Click);
+            // 
+            // btnPagoEmpleados
+            // 
+            this.btnPagoEmpleados.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPagoEmpleados.FlatAppearance.BorderSize = 0;
+            this.btnPagoEmpleados.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPagoEmpleados.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPagoEmpleados.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnPagoEmpleados.Location = new System.Drawing.Point(12, 354);
+            this.btnPagoEmpleados.Name = "btnPagoEmpleados";
+            this.btnPagoEmpleados.Size = new System.Drawing.Size(134, 45);
+            this.btnPagoEmpleados.TabIndex = 5;
+            this.btnPagoEmpleados.Text = "Pago Empleados";
+            this.btnPagoEmpleados.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPagoEmpleados.UseVisualStyleBackColor = true;
+            this.btnPagoEmpleados.Click += new System.EventHandler(this.btnPagoEmpleados_Click);
+            // 
+            // btnPagoCitas
+            // 
+            this.btnPagoCitas.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPagoCitas.FlatAppearance.BorderSize = 0;
+            this.btnPagoCitas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPagoCitas.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPagoCitas.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnPagoCitas.Location = new System.Drawing.Point(12, 316);
+            this.btnPagoCitas.Name = "btnPagoCitas";
+            this.btnPagoCitas.Size = new System.Drawing.Size(170, 32);
+            this.btnPagoCitas.TabIndex = 4;
+            this.btnPagoCitas.Text = "Pago Citas";
+            this.btnPagoCitas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPagoCitas.UseVisualStyleBackColor = true;
+            this.btnPagoCitas.Click += new System.EventHandler(this.btnPagoCitas_Click);
+            // 
+            // btnMedicamentos
+            // 
+            this.btnMedicamentos.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMedicamentos.FlatAppearance.BorderSize = 0;
+            this.btnMedicamentos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMedicamentos.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMedicamentos.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnMedicamentos.Location = new System.Drawing.Point(12, 201);
+            this.btnMedicamentos.Name = "btnMedicamentos";
+            this.btnMedicamentos.Size = new System.Drawing.Size(170, 32);
+            this.btnMedicamentos.TabIndex = 3;
+            this.btnMedicamentos.Text = "Medicamentos";
+            this.btnMedicamentos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMedicamentos.UseVisualStyleBackColor = true;
+            this.btnMedicamentos.Click += new System.EventHandler(this.btnMedicamentos_Click);
+            // 
             // btnPacientes
             // 
+            this.btnPacientes.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnPacientes.FlatAppearance.BorderSize = 0;
             this.btnPacientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPacientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -120,6 +188,7 @@
             // 
             // btnHabitaciones
             // 
+            this.btnHabitaciones.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnHabitaciones.FlatAppearance.BorderSize = 0;
             this.btnHabitaciones.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHabitaciones.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -135,6 +204,7 @@
             // 
             // btnGestionHabitaciones
             // 
+            this.btnGestionHabitaciones.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnGestionHabitaciones.FlatAppearance.BorderSize = 0;
             this.btnGestionHabitaciones.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGestionHabitaciones.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -169,127 +239,79 @@
             this.panelFormulario.Name = "panelFormulario";
             this.panelFormulario.Size = new System.Drawing.Size(868, 505);
             this.panelFormulario.TabIndex = 2;
+            this.panelFormulario.Paint += new System.Windows.Forms.PaintEventHandler(this.panelFormulario_Paint);
             // 
-            // btnMedicamentos
+            // pictureBox8
             // 
-            this.btnMedicamentos.FlatAppearance.BorderSize = 0;
-            this.btnMedicamentos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMedicamentos.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMedicamentos.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnMedicamentos.Location = new System.Drawing.Point(12, 201);
-            this.btnMedicamentos.Name = "btnMedicamentos";
-            this.btnMedicamentos.Size = new System.Drawing.Size(170, 32);
-            this.btnMedicamentos.TabIndex = 3;
-            this.btnMedicamentos.Text = "Medicamentos";
-            this.btnMedicamentos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMedicamentos.UseVisualStyleBackColor = true;
-            this.btnMedicamentos.Click += new System.EventHandler(this.btnMedicamentos_Click);
-            // 
-            // btnPagoCitas
-            // 
-            this.btnPagoCitas.FlatAppearance.BorderSize = 0;
-            this.btnPagoCitas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPagoCitas.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPagoCitas.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnPagoCitas.Location = new System.Drawing.Point(12, 316);
-            this.btnPagoCitas.Name = "btnPagoCitas";
-            this.btnPagoCitas.Size = new System.Drawing.Size(170, 32);
-            this.btnPagoCitas.TabIndex = 4;
-            this.btnPagoCitas.Text = "Pago Citas";
-            this.btnPagoCitas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPagoCitas.UseVisualStyleBackColor = true;
-            this.btnPagoCitas.Click += new System.EventHandler(this.btnPagoCitas_Click);
-            // 
-            // btnPagoEmpleados
-            // 
-            this.btnPagoEmpleados.FlatAppearance.BorderSize = 0;
-            this.btnPagoEmpleados.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPagoEmpleados.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPagoEmpleados.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnPagoEmpleados.Location = new System.Drawing.Point(12, 354);
-            this.btnPagoEmpleados.Name = "btnPagoEmpleados";
-            this.btnPagoEmpleados.Size = new System.Drawing.Size(134, 45);
-            this.btnPagoEmpleados.TabIndex = 5;
-            this.btnPagoEmpleados.Text = "Pago Empleados";
-            this.btnPagoEmpleados.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPagoEmpleados.UseVisualStyleBackColor = true;
-            this.btnPagoEmpleados.Click += new System.EventHandler(this.btnPagoEmpleados_Click);
-            // 
-            // btnUsuarios
-            // 
-            this.btnUsuarios.FlatAppearance.BorderSize = 0;
-            this.btnUsuarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUsuarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUsuarios.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnUsuarios.Location = new System.Drawing.Point(12, 418);
-            this.btnUsuarios.Name = "btnUsuarios";
-            this.btnUsuarios.Size = new System.Drawing.Size(170, 45);
-            this.btnUsuarios.TabIndex = 6;
-            this.btnUsuarios.Text = "Usuarios";
-            this.btnUsuarios.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUsuarios.UseVisualStyleBackColor = true;
-            this.btnUsuarios.Click += new System.EventHandler(this.btnUsuarios_Click);
+            this.pictureBox8.Image = global::Proyecto_3ErSemestre_2025_Hospital_Tbl_Sql.Properties.Resources.firmar;
+            this.pictureBox8.Location = new System.Drawing.Point(69, 19);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(77, 71);
+            this.pictureBox8.TabIndex = 8;
+            this.pictureBox8.TabStop = false;
             // 
             // pictureBox7
             // 
             this.pictureBox7.Image = global::Proyecto_3ErSemestre_2025_Hospital_Tbl_Sql.Properties.Resources.usuario;
-            this.pictureBox7.Location = new System.Drawing.Point(151, 431);
+            this.pictureBox7.Location = new System.Drawing.Point(147, 431);
             this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(37, 32);
+            this.pictureBox7.Size = new System.Drawing.Size(41, 42);
             this.pictureBox7.TabIndex = 6;
             this.pictureBox7.TabStop = false;
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pictureBox1.Image = global::Proyecto_3ErSemestre_2025_Hospital_Tbl_Sql.Properties.Resources.cama_de_hospital_peque_;
-            this.pictureBox1.Location = new System.Drawing.Point(151, 104);
+            this.pictureBox1.Location = new System.Drawing.Point(151, 96);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(37, 32);
+            this.pictureBox1.Size = new System.Drawing.Size(43, 40);
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
             // 
             // pictureBox6
             // 
             this.pictureBox6.Image = global::Proyecto_3ErSemestre_2025_Hospital_Tbl_Sql.Properties.Resources.alquiler;
-            this.pictureBox6.Location = new System.Drawing.Point(152, 367);
+            this.pictureBox6.Location = new System.Drawing.Point(147, 367);
             this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(37, 32);
+            this.pictureBox6.Size = new System.Drawing.Size(42, 45);
             this.pictureBox6.TabIndex = 5;
             this.pictureBox6.TabStop = false;
             // 
             // pictureBox5
             // 
+            this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pictureBox5.Image = global::Proyecto_3ErSemestre_2025_Hospital_Tbl_Sql.Properties.Resources.metodo_de_pago;
-            this.pictureBox5.Location = new System.Drawing.Point(152, 316);
+            this.pictureBox5.Location = new System.Drawing.Point(149, 314);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(37, 32);
+            this.pictureBox5.Size = new System.Drawing.Size(42, 45);
             this.pictureBox5.TabIndex = 4;
             this.pictureBox5.TabStop = false;
             // 
             // pictureBox4
             // 
             this.pictureBox4.Image = global::Proyecto_3ErSemestre_2025_Hospital_Tbl_Sql.Properties.Resources.paciente;
-            this.pictureBox4.Location = new System.Drawing.Point(152, 265);
+            this.pictureBox4.Location = new System.Drawing.Point(149, 261);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(37, 32);
+            this.pictureBox4.Size = new System.Drawing.Size(42, 45);
             this.pictureBox4.TabIndex = 3;
             this.pictureBox4.TabStop = false;
             // 
             // pictureBox3
             // 
             this.pictureBox3.Image = global::Proyecto_3ErSemestre_2025_Hospital_Tbl_Sql.Properties.Resources.medicamento_peque;
-            this.pictureBox3.Location = new System.Drawing.Point(152, 201);
+            this.pictureBox3.Location = new System.Drawing.Point(147, 201);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(37, 32);
+            this.pictureBox3.Size = new System.Drawing.Size(47, 41);
             this.pictureBox3.TabIndex = 2;
             this.pictureBox3.TabStop = false;
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::Proyecto_3ErSemestre_2025_Hospital_Tbl_Sql.Properties.Resources.hospital;
-            this.pictureBox2.Location = new System.Drawing.Point(152, 150);
+            this.pictureBox2.Location = new System.Drawing.Point(151, 150);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(37, 32);
+            this.pictureBox2.Size = new System.Drawing.Size(38, 45);
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;
             // 
@@ -360,6 +382,7 @@
             this.panelBarraTitulo.ResumeLayout(false);
             this.panelMenu.ResumeLayout(false);
             this.panelContenedor.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
@@ -399,5 +422,6 @@
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox8;
     }
 }

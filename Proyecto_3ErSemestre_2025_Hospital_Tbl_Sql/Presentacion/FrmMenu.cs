@@ -154,6 +154,11 @@ namespace Proyecto3er_SEMESTRE_Hospital_2025
             AbrirFormulario<FrmUsuarios>();
         }
 
+        private void panelFormulario_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
         #endregion
