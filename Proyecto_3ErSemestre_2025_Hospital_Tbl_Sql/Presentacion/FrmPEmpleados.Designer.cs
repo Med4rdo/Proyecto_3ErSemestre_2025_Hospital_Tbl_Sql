@@ -29,6 +29,10 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cboxcodigoempleado = new System.Windows.Forms.ComboBox();
+            this.btncancelar = new FontAwesome.Sharp.IconButton();
+            this.btneditar = new FontAwesome.Sharp.IconButton();
+            this.btnagregar = new FontAwesome.Sharp.IconButton();
             this.lblmonto = new System.Windows.Forms.Label();
             this.txtmontohoras = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -48,12 +52,8 @@
             this.lblTituloFecha = new System.Windows.Forms.Label();
             this.lblHabitaciones = new System.Windows.Forms.Label();
             this.dgvpagoempleados = new System.Windows.Forms.DataGridView();
-            this.cboxcodigoempleado = new System.Windows.Forms.ComboBox();
             this.btnsalir = new FontAwesome.Sharp.IconButton();
             this.btneliminar = new FontAwesome.Sharp.IconButton();
-            this.btncancelar = new FontAwesome.Sharp.IconButton();
-            this.btneditar = new FontAwesome.Sharp.IconButton();
-            this.btnagregar = new FontAwesome.Sharp.IconButton();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvpagoempleados)).BeginInit();
             this.SuspendLayout();
@@ -86,6 +86,60 @@
             this.groupBox1.Size = new System.Drawing.Size(1666, 361);
             this.groupBox1.TabIndex = 43;
             this.groupBox1.TabStop = false;
+            // 
+            // cboxcodigoempleado
+            // 
+            this.cboxcodigoempleado.FormattingEnabled = true;
+            this.cboxcodigoempleado.Location = new System.Drawing.Point(364, 62);
+            this.cboxcodigoempleado.Margin = new System.Windows.Forms.Padding(6);
+            this.cboxcodigoempleado.Name = "cboxcodigoempleado";
+            this.cboxcodigoempleado.Size = new System.Drawing.Size(266, 33);
+            this.cboxcodigoempleado.TabIndex = 42;
+            // 
+            // btncancelar
+            // 
+            this.btncancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F);
+            this.btncancelar.IconChar = FontAwesome.Sharp.IconChar.Remove;
+            this.btncancelar.IconColor = System.Drawing.Color.Black;
+            this.btncancelar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btncancelar.Location = new System.Drawing.Point(1460, 192);
+            this.btncancelar.Name = "btncancelar";
+            this.btncancelar.Size = new System.Drawing.Size(176, 54);
+            this.btncancelar.TabIndex = 41;
+            this.btncancelar.Text = "Cancelar";
+            this.btncancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btncancelar.UseVisualStyleBackColor = true;
+            this.btncancelar.Click += new System.EventHandler(this.btncancelar_Click_1);
+            // 
+            // btneditar
+            // 
+            this.btneditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F);
+            this.btneditar.IconChar = FontAwesome.Sharp.IconChar.SquarePen;
+            this.btneditar.IconColor = System.Drawing.Color.Black;
+            this.btneditar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btneditar.Location = new System.Drawing.Point(1460, 119);
+            this.btneditar.Name = "btneditar";
+            this.btneditar.Size = new System.Drawing.Size(176, 54);
+            this.btneditar.TabIndex = 40;
+            this.btneditar.Text = "Editar";
+            this.btneditar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btneditar.UseVisualStyleBackColor = true;
+            this.btneditar.Click += new System.EventHandler(this.btneditar_Click_1);
+            // 
+            // btnagregar
+            // 
+            this.btnagregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F);
+            this.btnagregar.IconChar = FontAwesome.Sharp.IconChar.UserPlus;
+            this.btnagregar.IconColor = System.Drawing.Color.Black;
+            this.btnagregar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnagregar.Location = new System.Drawing.Point(1460, 41);
+            this.btnagregar.Name = "btnagregar";
+            this.btnagregar.Size = new System.Drawing.Size(176, 54);
+            this.btnagregar.TabIndex = 39;
+            this.btnagregar.Text = "Agregar";
+            this.btnagregar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnagregar.UseVisualStyleBackColor = true;
+            this.btnagregar.Click += new System.EventHandler(this.btnagregar_Click);
             // 
             // lblmonto
             // 
@@ -184,6 +238,7 @@
             this.DtpFechaPago.Name = "DtpFechaPago";
             this.DtpFechaPago.Size = new System.Drawing.Size(264, 31);
             this.DtpFechaPago.TabIndex = 7;
+            this.DtpFechaPago.ValueChanged += new System.EventHandler(this.DtpFechaPago_ValueChanged);
             // 
             // CboxEstado
             // 
@@ -288,15 +343,6 @@
             this.dgvpagoempleados.TabIndex = 39;
             this.dgvpagoempleados.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvpagoempleados_CellClick);
             // 
-            // cboxcodigoempleado
-            // 
-            this.cboxcodigoempleado.FormattingEnabled = true;
-            this.cboxcodigoempleado.Location = new System.Drawing.Point(364, 62);
-            this.cboxcodigoempleado.Margin = new System.Windows.Forms.Padding(6);
-            this.cboxcodigoempleado.Name = "cboxcodigoempleado";
-            this.cboxcodigoempleado.Size = new System.Drawing.Size(266, 33);
-            this.cboxcodigoempleado.TabIndex = 42;
-            // 
             // btnsalir
             // 
             this.btnsalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F);
@@ -326,51 +372,6 @@
             this.btneliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btneliminar.UseVisualStyleBackColor = true;
             this.btneliminar.Click += new System.EventHandler(this.btneliminar_Click_1);
-            // 
-            // btncancelar
-            // 
-            this.btncancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F);
-            this.btncancelar.IconChar = FontAwesome.Sharp.IconChar.Remove;
-            this.btncancelar.IconColor = System.Drawing.Color.Black;
-            this.btncancelar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btncancelar.Location = new System.Drawing.Point(1460, 192);
-            this.btncancelar.Name = "btncancelar";
-            this.btncancelar.Size = new System.Drawing.Size(176, 54);
-            this.btncancelar.TabIndex = 41;
-            this.btncancelar.Text = "Cancelar";
-            this.btncancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btncancelar.UseVisualStyleBackColor = true;
-            this.btncancelar.Click += new System.EventHandler(this.btncancelar_Click_1);
-            // 
-            // btneditar
-            // 
-            this.btneditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F);
-            this.btneditar.IconChar = FontAwesome.Sharp.IconChar.SquarePen;
-            this.btneditar.IconColor = System.Drawing.Color.Black;
-            this.btneditar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btneditar.Location = new System.Drawing.Point(1460, 119);
-            this.btneditar.Name = "btneditar";
-            this.btneditar.Size = new System.Drawing.Size(176, 54);
-            this.btneditar.TabIndex = 40;
-            this.btneditar.Text = "Editar";
-            this.btneditar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btneditar.UseVisualStyleBackColor = true;
-            this.btneditar.Click += new System.EventHandler(this.btneditar_Click_1);
-            // 
-            // btnagregar
-            // 
-            this.btnagregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F);
-            this.btnagregar.IconChar = FontAwesome.Sharp.IconChar.UserPlus;
-            this.btnagregar.IconColor = System.Drawing.Color.Black;
-            this.btnagregar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnagregar.Location = new System.Drawing.Point(1460, 41);
-            this.btnagregar.Name = "btnagregar";
-            this.btnagregar.Size = new System.Drawing.Size(176, 54);
-            this.btnagregar.TabIndex = 39;
-            this.btnagregar.Text = "Agregar";
-            this.btnagregar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnagregar.UseVisualStyleBackColor = true;
-            this.btnagregar.Click += new System.EventHandler(this.btnagregar_Click);
             // 
             // FrmPEmpleados
             // 

@@ -247,5 +247,10 @@ namespace Proyecto_3ErSemestre_2025_Hospital_Tbl_Sql.presentacion
             cboxcodigoempleado.DisplayMember = "Text";
             cboxcodigoempleado.ValueMember = "Value";
         }
+
+        private void DtpFechaPago_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
