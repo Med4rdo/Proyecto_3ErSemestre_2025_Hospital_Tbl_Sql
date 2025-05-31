@@ -1,4 +1,5 @@
 ﻿using Proyecto_3ErSemestre_2025_Hospital_Tbl_Sql.presentacion;
+using Proyecto_3ErSemestre_2025_Hospital_Tbl_Sql.Presentacion;
 using Proyecto3er_SEMESTRE_Hospital_2025;
 using System;
 using System.Collections.Generic;
@@ -18,7 +19,13 @@ namespace Proyecto_3ErSemestre_2025_Hospital_Tbl_Sql
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmPacientes());
+
+
+            Application.Run(new FrmMedicamento());
+
+            
+
+
         }
     }
 }

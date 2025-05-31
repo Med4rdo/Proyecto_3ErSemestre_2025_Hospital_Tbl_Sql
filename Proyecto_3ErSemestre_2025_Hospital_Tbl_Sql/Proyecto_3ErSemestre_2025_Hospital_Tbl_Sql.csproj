@@ -55,14 +55,22 @@
   <ItemGroup>
     <Compile Include="Datos\CDconexion.cs" />
     <Compile Include="Datos\CDhabitaciones.cs" />
+    <Compile Include="Datos\CDMedicamentos.cs" />
     <Compile Include="Datos\CDpacientes.cs" />
     <Compile Include="Datos\CDPagoCitas.cs" />
     <Compile Include="Datos\CDPagoEmpleados.cs" />
     <Compile Include="Datos\CDusuarios.cs" />
     <Compile Include="Logica\ClaseFechas.cs" />
     <Compile Include="Logica\CLhabitaciones.cs" />
+    <Compile Include="Logica\CLMedicamentos.cs" />
     <Compile Include="Logica\CLPagoCitas.cs" />
     <Compile Include="Logica\CLPagoEmpleados.cs" />
+    <Compile Include="Presentacion\FrmMedicamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\FrmMedicamento.Designer.cs">
+      <DependentUpon>FrmMedicamento.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentacion\FrmPagoCitas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -113,6 +121,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Presentacion\FrmMedicamento.resx">
+      <DependentUpon>FrmMedicamento.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\FrmPagoCitas.resx">
       <DependentUpon>FrmPagoCitas.cs</DependentUpon>
     </EmbeddedResource>
